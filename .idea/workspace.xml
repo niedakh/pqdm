@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="676682b7-b656-48bf-b7b9-e6f30e535ee1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="cfcf9e81-1b78-4473-a11d-f915b9917ddc" />
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="KAAhdgOm" />
+  </component>
+  <component name="ProjectId" id="1Yhz7MJiTnf4prVLkuZaJ3AP6Bz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python tests.pytest in test_pqdm.py">
+    <configuration name="pytest for test_pqdm.test_pqdm_processes_pushes_argument_to_tqdm" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="pqdm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_pqdm.test_pqdm_processes_pushes_argument_to_tqdm&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_pqdm.test_pqdm_processes_work_with_argument_types" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="pqdm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_pqdm.test_pqdm_processes_work_with_argument_types&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_pqdm.test_pqdm_threads_work_with_argument_types" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="pqdm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_pqdm.test_pqdm_threads_work_with_argument_types&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_pqdm.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="pqdm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_pqdm.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in test_pqdm.py" />
+        <item itemvalue="Python tests.pytest for test_pqdm.test_pqdm_processes_pushes_argument_to_tqdm" />
+        <item itemvalue="Python tests.pytest for test_pqdm.test_pqdm_processes_work_with_argument_types" />
+        <item itemvalue="Python tests.pytest for test_pqdm.test_pqdm_threads_work_with_argument_types" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="676682b7-b656-48bf-b7b9-e6f30e535ee1" name="Default Changelist" comment="" />
+      <created>1583409445262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583409445262</updated>
+      <workItem from="1583409448082" duration="9259000" />
+      <workItem from="1583452931887" duration="2914000" />
+      <workItem from="1583528428957" duration="2091000" />
+      <workItem from="1583580810282" duration="5316000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="319" key="#xdebugger.evaluate" timestamp="1583456573590">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="233" y="319" key="#xdebugger.evaluate/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583456573590" />
+    <state width="699" height="646" key="DebuggerActiveHint" timestamp="1583456584115">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="699" height="646" key="DebuggerActiveHint/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583456584115" />
+    <state x="1067" y="478" key="FileChooserDialogImpl" timestamp="1583409517955">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1067" y="478" key="FileChooserDialogImpl/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583409517955" />
+    <state width="2518" height="383" key="GridCell.Tab.0.bottom" timestamp="1583586243253">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="383" key="GridCell.Tab.0.bottom/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583586243253" />
+    <state width="2518" height="383" key="GridCell.Tab.0.center" timestamp="1583586243253">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="383" key="GridCell.Tab.0.center/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583586243253" />
+    <state width="2518" height="383" key="GridCell.Tab.0.left" timestamp="1583586243253">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="383" key="GridCell.Tab.0.left/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583586243253" />
+    <state width="2518" height="383" key="GridCell.Tab.0.right" timestamp="1583586243253">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="383" key="GridCell.Tab.0.right/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583586243253" />
+    <state width="2518" height="475" key="GridCell.Tab.1.bottom" timestamp="1583530165061">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="475" key="GridCell.Tab.1.bottom/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583530165061" />
+    <state width="2518" height="475" key="GridCell.Tab.1.center" timestamp="1583530165061">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="475" key="GridCell.Tab.1.center/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583530165061" />
+    <state width="2518" height="475" key="GridCell.Tab.1.left" timestamp="1583530165061">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="475" key="GridCell.Tab.1.left/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583530165061" />
+    <state width="2518" height="475" key="GridCell.Tab.1.right" timestamp="1583530165061">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="475" key="GridCell.Tab.1.right/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583530165061" />
+    <state x="789" y="355" key="SettingsEditor" timestamp="1583409521586">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="789" y="355" key="SettingsEditor/0.0.2560.1440/2559.0.3840.2160@0.0.2560.1440" timestamp="1583409521586" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pqdm$pytest_for_test_pqdm_test_pqdm_threads_work_with_argument_types.coverage" NAME="pytest for test_pqdm.test_pqdm_threads_work_with_argument_types Coverage Results" MODIFIED="1583422988532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/pqdm$pytest_in_test_pqdm_py.coverage" NAME="pytest in test_pqdm.py Coverage Results" MODIFIED="1583586243245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/pqdm$pytest_for_test_pqdm_test_pqdm_processes_work_with_argument_types.coverage" NAME="pytest for test_pqdm.test_pqdm_processes_work_with_argument_types Coverage Results" MODIFIED="1583422996991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/pqdm$pytest_for_test_pqdm_test_pqdm_processes_pushes_argument_to_tqdm.coverage" NAME="pytest for test_pqdm.test_pqdm_processes_pushes_argument_to_tqdm Coverage Results" MODIFIED="1583453838622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+</project>
