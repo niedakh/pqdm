@@ -20,7 +20,8 @@ Parallel TQDM
 
 
 
-PQDM is a TQDM and concurrent futures wrapper to allow enjoyable paralellization of progress bars.
+PQDM is a TQDM and concurrent futures wrapper to allow enjoyable paralellization of
+iterating through an Iterable with a progress bar.
 
 
 * Free software: MIT license
