@@ -9,7 +9,7 @@ To use Parallel TQDM in a project::
 There very basic usage is running ``pqdm`` on an ``Iterable`` whose elements are
 directly supported by the ``Callable`` passed to ``pqdm``:
 
- .. code-block:: python
+.. code-block:: python
 
     from pqdm.processes import pqdm
     # If you want threads instead:
