@@ -32,7 +32,9 @@ def _parallel_process(
     executor_opts['max_workers'] = n_jobs
 
     if n_jobs == 1:
-        return _handle_singular_processor(iterable, function, argument_type, tqdm_opts)
+        return _handle_singular_processor(
+            iterable, function, argument_type, tqdm_opts
+        )
 
     with executor(**executor_opts) as pool:
 
@@ -40,11 +42,20 @@ def _parallel_process(
         submitting_opts['desc'] = 'SUBMITTING | ' + submitting_opts.get('desc', '')
 
         if argument_type == ArgumentPassing.AS_KWARGS:
-            futures = [pool.submit(function, **a) for a in TQDM(iterable, **submitting_opts)]
+            futures = [
+                pool.submit(function, **a)
+                for a in TQDM(iterable, **submitting_opts)
+            ]
         elif argument_type == ArgumentPassing.AS_ARGS:
-            futures = [pool.submit(function, *a) for a in TQDM(iterable, **submitting_opts)]
+            futures = [
+                pool.submit(function, *a)
+                for a in TQDM(iterable, **submitting_opts)
+            ]
         else:
-            futures = [pool.submit(function, a) for a in TQDM(iterable, **submitting_opts)]
+            futures = [
+                pool.submit(function, a)
+                for a in TQDM(iterable, **submitting_opts)
+            ]
 
         processing_opts = copy.copy(tqdm_opts)
         processing_opts['desc'] = 'PROCESSING | ' + processing_opts.get('desc', '')
