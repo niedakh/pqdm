@@ -50,7 +50,7 @@ and use ::
 
     result = pqdm(args, square, n_jobs=2)
 
-For more examples variants check the `Usage <http://https://pqdm.readthedocs.io/en/latest/usage.html/>`_ section of the docs.
+For more examples variants check the `Usage <https://pqdm.readthedocs.io/en/latest/usage.html>`_ section of the docs.
 
 Features
 --------
