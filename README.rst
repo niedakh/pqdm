@@ -56,9 +56,9 @@ Features
 --------
 
 * parellize your tqdm runs using processes or threads thanks to concurrent.futures,
-* just import ``pqdm`` from ```pqdm.threads``` or ```pqdm.processes``` to start,
-* automatic usage of ```tqdm.notebook``` when iPython/Jupyter notebook environment detected,
-* automatic parsing of ```pqdm``` kwargs and separating between ```concurrent.Executor``` args and ```tqdm``` args,
+* just import ``pqdm`` from ``pqdm.threads`` or ``pqdm.processes`` to start,
+* automatic usage of ``tqdm.notebook`` when iPython/Jupyter notebook environment detected,
+* automatic parsing of ```pqdm``` kwargs and separating between ``concurrent.Executor`` args and ``tqdm`` args,
 * support for any iterable and passing items as kwargs, args or directly to function which is being applied
 * support bounded exectutors via https://github.com/mowshon/bounded_pool_executor
 
