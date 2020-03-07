@@ -28,11 +28,12 @@ Everytime you run ``pqdm`` with more than one job (i.e. ``n_jobs > 1``) you will
 need to make a decision about the backend used, the standard options from Python's
 ``concurrent.futures`` library are:
 
-- threads:
-- processes:
+- threads: share memory with the main process, subject to GIL, low benefit on CPU heavy tasks, best for IO tasks or tasks involving external systems,
+- processes: best for CPU heavy tasks, GIL-free, have an IO overhead due to lack of shared memory and need to dump/pickle data
 
 With both backends ``pqdm`` supports `bounded` variants, which are semaphore guarded. For
-more information on processes vs threads see the concurent futures documentation.
+more information on processes vs threads see the concurent futures documentation or `Brendant
+Fortuner's medium post <https://medium.com/@bfortuner/python-multithreading-vs-multiprocessing-73072ce5600b>`_.
 
 Different ways to pass arguments to function
 --------------------------------------------

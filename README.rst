@@ -42,14 +42,15 @@ and use ::
     # If you want threads instead:
     # from pqdm.threads import pqdm
 
-    args_1 = [1, 2, 3]
-    args_2 = [2, 3, 4]
+    args = [1, 2, 3, 4, 5]
+    # args = range(1,6) would also work
 
-    def multiply(a,b):
-        return a*b
+    def square(a):
+        return a*a
 
-    pqdm(zip(args_1, args_2), argument_type='args', n_jobs=2)
+    result = pqdm(args, square, n_jobs=2)
 
+For more examples variants check the `Usage <http://https://pqdm.readthedocs.io/en/latest/usage.html/>`_ section of the docs.
 
 Features
 --------
