@@ -35,16 +35,20 @@ def _parallel_process(
         return _handle_singular_processor(iterable, function, argument_type, tqdm_opts)
 
     with executor(**executor_opts) as pool:
-        if argument_type == ArgumentPassing.AS_KWARGS:
-            futures = [pool.submit(function, **a) for a in iterable]
-        elif argument_type == ArgumentPassing.AS_ARGS:
-            futures = [pool.submit(function, *a) for a in iterable]
-        else:
-            futures = [pool.submit(function, a) for a in iterable]
 
+        submitting_opts = copy.copy(tqdm_opts)
+        submitting_opts['desc'] = 'SUBMITTING | ' + submitting_opts.get('desc', '')
+
+        if argument_type == ArgumentPassing.AS_KWARGS:
+            futures = [pool.submit(function, **a) for a in TQDM(iterable, **submitting_opts)]
+        elif argument_type == ArgumentPassing.AS_ARGS:
+            futures = [pool.submit(function, *a) for a in TQDM(iterable, **submitting_opts)]
+        else:
+            futures = [pool.submit(function, a) for a in TQDM(iterable, **submitting_opts)]
 
         pre_opts = copy.copy(tqdm_opts)
-        pre_opts['desc'] = 'SUBMITTING | ' + pre_opts.get('desc','')
+        pre_opts['desc'] = 'PROCESSING | ' + pre_opts.get('desc', '')
+        pre_opts['total'] = len(futures)
 
         for _ in TQDM(
             as_completed(futures),
