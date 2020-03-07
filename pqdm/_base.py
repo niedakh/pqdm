@@ -46,20 +46,19 @@ def _parallel_process(
         else:
             futures = [pool.submit(function, a) for a in TQDM(iterable, **submitting_opts)]
 
-        pre_opts = copy.copy(tqdm_opts)
-        pre_opts['desc'] = 'PROCESSING | ' + pre_opts.get('desc', '')
-        pre_opts['total'] = len(futures)
+        processing_opts = copy.copy(tqdm_opts)
+        processing_opts['desc'] = 'PROCESSING | ' + processing_opts.get('desc', '')
+        processing_opts['total'] = len(futures)
 
-        for _ in TQDM(
-            as_completed(futures),
-            **pre_opts
-        ):
+        for _ in TQDM(as_completed(futures), **processing_opts):
             pass
 
-        tqdm_opts['desc'] = 'COLLECTING | ' + tqdm_opts.get('desc', '')
+    collecting_opts = copy.copy(tqdm_opts)
+    collecting_opts['desc'] = 'COLLECTING | ' + collecting_opts.get('desc', '')
+    collecting_opts['total'] = len(futures)
 
     results = []
-    for i, future in TQDM(enumerate(futures), **tqdm_opts):
+    for i, future in TQDM(enumerate(futures), **collecting_opts):
         try:
             results.append(future.result())
         except Exception as e:
