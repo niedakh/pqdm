@@ -83,7 +83,7 @@ def test_argument_types(pqdm_method, function, input_list, kwargs):
 
 @run_for_threads_and_processes
 @pytest.mark.parametrize("function, input_list, kwargs", TEST_DATA)
-def test_pqdm_processes_pushes_argument_to_tqdm(pqdm_method, function, input_list, kwargs):
+def test_pqdm_pushes_argument_to_tqdm(pqdm_method, function, input_list, kwargs):
     output = io.StringIO("")
 
     kwargs['desc'] = 'Testing'
