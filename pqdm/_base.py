@@ -1,11 +1,12 @@
 import copy
 from concurrent.futures import Executor, as_completed
-from typing import Any, Callable, Iterable
+from typing import Any, Callable, Iterable, Union
 
 from tqdm import tqdm as tqdm_cli
 from tqdm.notebook import tqdm as tqdm_notebook
+from typing_extensions import Literal
 
-from pqdm.constants import ArgumentPassing
+from pqdm.constants import ArgumentPassing, ExceptionBehaviour
 from pqdm.utils import _inside_jupyter, _divide_kwargs
 
 TQDM = tqdm_notebook if _inside_jupyter() else tqdm_cli
@@ -26,6 +27,7 @@ def _parallel_process(
     n_jobs: int,
     executor: Executor,
     argument_type: str = 'direct',
+    exception_behaviour: Union[Literal['ignore'], Literal['immediate'], Literal['deferred']] = 'ignore',
     **kwargs
 ):
     executor_opts, tqdm_opts = _divide_kwargs(kwargs, executor)
@@ -69,10 +71,19 @@ def _parallel_process(
     collecting_opts['total'] = len(futures)
 
     results = []
+    exceptions = []
     for i, future in TQDM(enumerate(futures), **collecting_opts):
         try:
             results.append(future.result())
         except Exception as e:
-            results.append(e)
+            if exception_behaviour == ExceptionBehaviour.IMMEDIATE:
+                raise e
+            if exception_behaviour == ExceptionBehaviour.IGNORE:
+                results.append(e)
+            if exception_behaviour == ExceptionBehaviour.DEFERRED:
+                exceptions.append(e)
+
+    if exceptions:
+        raise Exception(*exceptions)
 
     return results
