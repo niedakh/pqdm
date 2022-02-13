@@ -2,23 +2,21 @@ import copy
 from concurrent.futures import Executor, as_completed
 from typing import Any, Callable, Iterable, Union
 
-from tqdm import tqdm as tqdm_cli
-from tqdm.notebook import tqdm as tqdm_notebook
+from tqdm import tqdm_type
+from tqdm.auto import tqdm
 from typing_extensions import Literal
 
 from pqdm.constants import ArgumentPassing, ExceptionBehaviour
 from pqdm.utils import _inside_jupyter, _divide_kwargs
 
-TQDM = tqdm_notebook if _inside_jupyter() else tqdm_cli
 
-
-def _handle_singular_processor(array, function, argument_type, tqdm_opts):
+def _handle_singular_processor(array, function, argument_type, tqdm_class, tqdm_opts):
     if argument_type == ArgumentPassing.AS_KWARGS:
-        return [function(**a) for a in TQDM(array, **tqdm_opts)]
+        return [function(**a) for a in tqdm_class(array, **tqdm_opts)]
     elif argument_type == ArgumentPassing.AS_ARGS:
-        return [function(*a) for a in TQDM(array, **tqdm_opts)]
+        return [function(*a) for a in tqdm_class(array, **tqdm_opts)]
     else:
-        return [function(a) for a in TQDM(array, **tqdm_opts)]
+        return [function(a) for a in tqdm_class(array, **tqdm_opts)]
 
 
 def _parallel_process(
@@ -28,6 +26,7 @@ def _parallel_process(
     executor: Executor,
     argument_type: str = 'direct',
     exception_behaviour: Union[Literal['ignore'], Literal['immediate'], Literal['deferred']] = 'ignore',
+    tqdm_class: tqdm_type = tqdm.auto,
     **kwargs
 ):
     executor_opts, tqdm_opts = _divide_kwargs(kwargs, executor)
@@ -35,7 +34,7 @@ def _parallel_process(
 
     if n_jobs == 1:
         return _handle_singular_processor(
-            iterable, function, argument_type, tqdm_opts
+            iterable, function, argument_type, tqdm_class, tqdm_opts
         )
 
     with executor(**executor_opts) as pool:
@@ -46,24 +45,24 @@ def _parallel_process(
         if argument_type == ArgumentPassing.AS_KWARGS:
             futures = [
                 pool.submit(function, **a)
-                for a in TQDM(iterable, **submitting_opts)
+                for a in tqdm_class(iterable, **submitting_opts)
             ]
         elif argument_type == ArgumentPassing.AS_ARGS:
             futures = [
                 pool.submit(function, *a)
-                for a in TQDM(iterable, **submitting_opts)
+                for a in tqdm_class(iterable, **submitting_opts)
             ]
         else:
             futures = [
                 pool.submit(function, a)
-                for a in TQDM(iterable, **submitting_opts)
+                for a in tqdm_class(iterable, **submitting_opts)
             ]
 
         processing_opts = copy.copy(tqdm_opts)
         processing_opts['desc'] = 'PROCESSING | ' + processing_opts.get('desc', '')
         processing_opts['total'] = len(futures)
 
-        for _ in TQDM(as_completed(futures), **processing_opts):
+        for _ in tqdm_class(as_completed(futures), **processing_opts):
             pass
 
     collecting_opts = copy.copy(tqdm_opts)
@@ -72,7 +71,7 @@ def _parallel_process(
 
     results = []
     exceptions = []
-    for i, future in TQDM(enumerate(futures), **collecting_opts):
+    for i, future in tqdm_class(enumerate(futures), **collecting_opts):
         try:
             results.append(future.result())
         except Exception as e:

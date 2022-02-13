@@ -2,6 +2,7 @@ from concurrent.futures import ProcessPoolExecutor
 from typing import Any, Callable, Iterable, Optional, Union
 
 from bounded_pool_executor import BoundedProcessPoolExecutor
+from tqdm import tqdm_type
 from typing_extensions import Literal
 
 from pqdm._base import _parallel_process
@@ -14,6 +15,7 @@ def pqdm(
     argument_type: Optional[Union[Literal['kwargs'], Literal['args']]] = None,
     bounded: bool = False,
     exception_behaviour: Union[Literal['ignore'], Literal['immediate'], Literal['deferred']] = 'ignore',
+    tqdm_class: tqdm_type = tqdm.auto,
     **kwargs
 ):
     return _parallel_process(
@@ -23,5 +25,6 @@ def pqdm(
         n_jobs=n_jobs,
         executor=BoundedProcessPoolExecutor if bounded else ProcessPoolExecutor,
         exception_behaviour=exception_behaviour,
+        tqdm_class=tqdm_class,
         **kwargs
     )
