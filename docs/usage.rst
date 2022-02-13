@@ -60,7 +60,6 @@ The library supports both variants, here's how a named argument should be passed
         {'a': 3, 'b': 4},
         {'a': 4, 'b': 5}
     ]
-    # args = range(1,6) would also work
 
     def multiply(a, b):
         return a*b
@@ -77,7 +76,6 @@ and for the positional arguments:
     # from pqdm.threads import pqdm
 
     args = [[1, 2], [2, 3], [3, 4], [4, 5]],
-    # args = range(1,6) would also work
 
     def multiply(a, b):
         return a*b
