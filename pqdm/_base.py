@@ -2,8 +2,8 @@ import copy
 from concurrent.futures import Executor, as_completed
 from typing import Any, Callable, Iterable, Union
 
-from tqdm import tqdm_type
-from tqdm.auto import tqdm
+from tqdm import tqdm as tqdm_type
+from tqdm.auto import tqdm as tqdm_auto
 from typing_extensions import Literal
 
 from pqdm.constants import ArgumentPassing, ExceptionBehaviour
@@ -26,7 +26,7 @@ def _parallel_process(
     executor: Executor,
     argument_type: str = 'direct',
     exception_behaviour: Union[Literal['ignore'], Literal['immediate'], Literal['deferred']] = 'ignore',
-    tqdm_class: tqdm_type = tqdm.auto,
+    tqdm_class: tqdm_type = tqdm_auto,
     **kwargs
 ):
     executor_opts, tqdm_opts = _divide_kwargs(kwargs, executor)
