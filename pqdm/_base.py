@@ -40,7 +40,7 @@ def _parallel_process(
     with executor(**executor_opts) as pool:
 
         submitting_opts = copy.copy(tqdm_opts)
-        submitting_opts['desc'] = 'SUBMITTING | ' + submitting_opts.get('desc', '')
+        submitting_opts['desc'] = 'QUEUEING TASKS | ' + submitting_opts.get('desc', '')
 
         if argument_type == ArgumentPassing.AS_KWARGS:
             futures = [
@@ -59,14 +59,14 @@ def _parallel_process(
             ]
 
         processing_opts = copy.copy(tqdm_opts)
-        processing_opts['desc'] = 'PROCESSING | ' + processing_opts.get('desc', '')
+        processing_opts['desc'] = 'PROCESSING TASKS | ' + processing_opts.get('desc', '')
         processing_opts['total'] = len(futures)
 
         for _ in tqdm_class(as_completed(futures), **processing_opts):
             pass
 
     collecting_opts = copy.copy(tqdm_opts)
-    collecting_opts['desc'] = 'COLLECTING | ' + collecting_opts.get('desc', '')
+    collecting_opts['desc'] = 'COLLECTING RESULTS | ' + collecting_opts.get('desc', '')
     collecting_opts['total'] = len(futures)
 
     results = []
