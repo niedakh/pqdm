@@ -102,3 +102,34 @@ You may want to change ``tqdm`` output, for this reason any option not handle by
         return a*a
 
     result = pqdm(args, square, n_jobs=2, desc='Squaring elements', unit='el')
+
+Changing the tqdm_class
+-----------------------
+
+In some use cases you might want to use a custom tqdm class. By default the ``tqdm.auto``
+class is used, which should select either a html-based tqdm for notebooks or a command
+line tqdm.
+
+However other tqdm classes exists, let's for example assume you have a discord channel
+and want to use the `tqdm.contrib.discord <https://tqdm.github.io/docs/contrib.discord/>`_
+class, just use the following:
+
+ .. code-block:: python
+
+    from pqdm.processes import pqdm
+    from tqdm.contrib.discord import tqdm as tqdm_discord
+    # If you want threads instead:
+    # from pqdm.threads import pqdm
+
+    args = [1, 2, 3, 4, 5]
+
+    def square(a):
+        return a*a
+
+    result = pqdm(
+        args, square, n_jobs=2, tqdm_class=tqdm_discord,
+        # tqdm_discord kwargs
+        token='{token}', channel_id='{channel_id}',
+        # base tqdm kwargs
+        desc='Squaring elements', unit='el'
+    )
