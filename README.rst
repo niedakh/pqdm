@@ -59,8 +59,6 @@ Features
 * support for any iterable and passing items as kwargs, args or directly to function which is being applied
 * support bounded exectutors via https://github.com/mowshon/bounded_pool_executor
 
-.. include:: AUTHORS.rst
-
 Credits
 -------
 
