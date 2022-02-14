@@ -14,10 +14,6 @@ requirements = [
     'bounded-pool-executor', 'tqdm', 'typing-extensions'
 ]
 
-setup_requirements = ['pytest-runner', ]
-
-test_requirements = ['pytest>=3', ]
-
 setup(
     author="Piotr Szymański",
     author_email='niedakh@gmail.com',
@@ -31,6 +27,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
     description="PQDM is a TQDM and concurrent futures wrapper to allow enjoyable paralellization of progress bars.",
     install_requires=requirements,
@@ -40,10 +37,7 @@ setup(
     keywords='pqdm',
     name='pqdm',
     packages=find_packages(include=['pqdm', 'pqdm.*']),
-    setup_requires=setup_requirements,
-    test_suite='tests',
-    tests_require=test_requirements,
     url='https://github.com/niedakh/pqdm',
-    version='0.1.0',
+    version='0.2.0',
     zip_safe=False,
 )
