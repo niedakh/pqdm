@@ -2,7 +2,7 @@ pip==22.0.3
 bump2version==1.0.1
 wheel==0.37.1
 flake8==4.0.1
-watchdog==2.1.6
+watchdog==2.2.1
 tox==3.24.5
 Sphinx==4.4.0
 coverage==6.3.2
