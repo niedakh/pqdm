@@ -7,5 +7,5 @@ tox==3.24.5
 Sphinx==4.4.0
 coverage==6.3.2
 Sphinx==4.4.0
-twine==4.0.0
+twine==5.1.0
 pytest==7.0.1
